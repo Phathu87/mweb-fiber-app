@@ -31,11 +31,12 @@ A React web application to browse MWEB fibre products from multiple providers, f
 
 ### Prerequisites
 
-Make sure you have **Node.js** and **npm** or **yarn** installed.
+Make sure you have **Node.js** and **npm** or **yarn** installed:
 
 ```bash
 node -v
 npm -v
+
 Installation
 Clone the repository:
 
@@ -58,7 +59,7 @@ yarn dev
 Open the app in your browser:
 http://localhost:5173
 
-Project Structure
+## Project Structure
 
 mweb-fiber-app/
 ├─ src/
@@ -72,33 +73,30 @@ mweb-fiber-app/
 ├─ package.json
 └─ README.md
 
-Usage
-Use the provider chips to filter products by provider.
+### Usage
 
-Open the price or speed dropdowns to filter by price ranges or speeds.
+1. Use the provider chips to filter products by provider.
+2. Open the price or speed dropdowns to filter by price ranges or speeds.
+3. Click **Check coverage** to open the provider’s coverage page for the product.
 
-Click Check coverage to open the provider’s coverage page for the product.
+### Mock Data
 
-Mock Data
-Because the MWEB API may not be publicly accessible, the app uses MOCK_PRODUCTS for development. You can replace the mock data with live API calls when available.
+- Since the MWEB API may not be publicly accessible, the app uses `MOCK_PRODUCTS` for development. Replace this with live API calls when available.
 
-Contributing
-Fork the repository.
 
-Create your feature branch: git checkout -b feature/my-feature.
+### Contributing
+1. Fork the repository.
+2. Create your feature branch: git checkout -b feature/my-feature.
+3. Commit your changes: git commit -m 'Add some feature'.
+4. Push to the branch: git push origin feature/my-feature.
+5. Open a pull request.
 
-Commit your changes: git commit -m 'Add some feature'.
+## License
 
-Push to the branch: git push origin feature/my-feature.
+- This project is licensed under the MIT License © 2025 Phathu Rakhunwana.
 
-Open a pull request.
+## Acknowledgements
 
-License
-MIT License © 2025 Phathu Rakhunwana
-
-Acknowledgements
-React
-
-Vite
-
-MWEB – API reference for fibre products
+- React
+- Vite
+- MWEB – API reference for fibre products
