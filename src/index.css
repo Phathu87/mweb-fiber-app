@@ -1,0 +1,135 @@
+:root{
+  --brand:#3d7a99;         /* deep blue for deal type */
+  --accent:#e64a35;        /* check coverage button */
+  --muted:#6b7280;         /* gray text */
+  --border:#e5e7eb;        /* light borders */
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:#111827;
+  background:#e9e7e7;
+}
+
+.container{max-width:1120px;margin:0 auto;padding:16px}
+@media (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+}
+.h1{color:#3d7a99 ;font-size:36px;font-weight:900;text-align:center;margin:8px 0 6px}
+.subtle{color:#050505;font-size:14px;text-align:center;margin-bottom:18px}
+
+.logo-strip{
+  display:flex;gap:28px;justify-content:center;align-items:center;
+  opacity:.9;flex-wrap:wrap;margin:8px 0 24px
+}
+.logo-strip img{height:26px;opacity:.85}
+.logo-strip img:hover{opacity:1}
+
+.toolbar{
+  display:flex;gap:12px;align-items:center;justify-content:space-between;
+  margin-bottom:18px;flex-wrap:nowrap
+}
+@media (max-width: 600px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .deal-type {
+    width: 30%;
+    padding:0 18px;
+  }
+}
+
+.filters{
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap;flex:1;min-width: 0;
+}
+.dropdown{
+  position:relative
+}
+.dropdown > button{
+  height:40px; padding:0 14px; background:#fff; border:1px solid var(--border);
+  border-radius:6px; display:flex; align-items:center; gap:8px; cursor:pointer
+}
+.menu{
+  position:absolute; top:46px; left:0; z-index:10; background:#fff; border:1px solid var(--border);
+  border-radius:8px; box-shadow:0 10px 24px rgba(0,0,0,.08);
+  min-width:220px; padding:8px
+}
+.menu label{
+  display:flex; align-items:center; gap:8px; padding:8px 10px; cursor:pointer; border-radius:6px
+}
+.menu label:hover{background:#f9fafb}
+.menu input{accent-color:var(--brand)}
+
+.deal-type{
+  height:44px; background:var(--brand); color:#fff; border:none; border-radius:6px;
+  padding:0 18px; font-weight:600; box-shadow:0 4px 0 rgba(0,0,0,.08); flex-shrink: 0; 
+}
+@media (max-width: 600px) {
+  .deal-type {
+    flex-wrap: nowrap;
+  }
+  .filters {
+    flex: 1;
+  }
+}
+
+.grid{
+  display:grid; gap:18px;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+}
+@media (max-width:900px){ .grid{ grid-template-columns:1fr } }
+
+.card{
+  border:1px solid var(--border); border-radius:10px; padding:16px; background:#fff;
+  box-shadow:0 4px 20px rgba(0,0,0,.04);
+}
+.card-row{display:flex; align-items:stretch; gap:18px; justify-content:space-between}
+.card-left{flex:1}
+.card-title{color:#3d7a99;font-size:18px; font-weight:700; margin:2px 0 6px}
+.badges{display:flex; gap:8px; color:var(--muted); font-size:13px; margin-bottom:12px}
+.badge{color:#fff;background:#3d7a99; border-radius:999px; padding:4px 10px}
+.price{color:#3d7a99;font-size:28px; font-weight:800; margin-top:10px}
+.unit{font-size:16px; font-weight:700}
+
+.card-right{
+  display:flex; flex-direction:column; align-items:flex-end; justify-content:space-between; min-width:260px
+}
+.provider-logo{height:28px; opacity:.9}
+@media (max-width: 480px) {
+  .provider-logo {
+    height: 22px;
+  }
+  .metrics {
+    font-size: 12px;
+    gap: 12px;
+  }
+}
+.metrics{display:flex; gap:24px; color:#3d7a99; font-size:14px; font-weight:600;}
+.metric{display:flex; flex-direction:column; align-items:center; gap:4px}
+.metric b{color:#111827}
+.coverage{
+  background:linear-gradient(180deg, #ff6a50, var(--accent));
+  color:#fff; border:none; border-radius:8px; padding:10px 16px; font-weight:700; cursor:pointer;
+  box-shadow:0 10px 18px rgba(230,74,53,.35)
+}
+.coverage:hover{filter:brightness(.98)}
+.footer{
+  margin-top:28px; text-align:center; color:#6b7280; font-size:13px
+}
+
+.providers-panel{
+  display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; justify-content:center
+}
+.provider-chip{
+  border:1px solid var(--border); border-radius:999px; padding:6px 10px; display:flex; align-items:center; gap:8px;
+  background:#fff; cursor:pointer
+}
+.provider-chip.active{outline:2px solid var(--brand)}
+.provider-chip img{height:16px}
