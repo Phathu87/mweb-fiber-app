@@ -69,11 +69,12 @@ body{
 
 .deal-type{
   height:44px; background:var(--brand); color:#fff; border:none; border-radius:6px;
-  padding:0 18px; font-weight:600; box-shadow:0 4px 0 rgba(0,0,0,.08); flex-shrink: 0; 
+  padding:0,18px; font-weight:600; box-shadow:0 4px 0 rgba(0,0,0,.08); flex-shrink: 0; margin-left:auto; 
 }
 @media (max-width: 600px) {
   .deal-type {
     flex-wrap: nowrap;
+    display: inline-block;
   }
   .filters {
     flex: 1;
@@ -94,7 +95,7 @@ body{
 .card-left{flex:1}
 .card-title{color:#3d7a99;font-size:18px; font-weight:700; margin:2px 0 6px}
 .badges{display:flex; gap:8px; color:var(--muted); font-size:13px; margin-bottom:12px}
-.badge{color:#fff;background:#3d7a99; border-radius:999px; padding:4px 10px}
+.badge{color:#fff;background:#3d7a99; border-radius:999px; padding:4px 4px; font-size: 11px;}
 .price{color:#3d7a99;font-size:28px; font-weight:800; margin-top:10px}
 .unit{font-size:16px; font-weight:700}
 

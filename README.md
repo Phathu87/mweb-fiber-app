@@ -33,7 +33,6 @@ A React web application to browse MWEB fibre products from multiple providers, f
 
 Make sure you have **Node.js** and **npm** or **yarn** installed:
 
-```bash
 node -v
 npm -v
 
